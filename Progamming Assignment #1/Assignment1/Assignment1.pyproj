@@ -11,6 +11,9 @@
     <OutputPath>.</OutputPath>
     <Name>Assignment1</Name>
     <RootNamespace>Assignment1</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>start1.txt goal1.txt bfs output.txt</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
