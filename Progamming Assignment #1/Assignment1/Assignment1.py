@@ -1,8 +1,19 @@
 import logging
 from copy import deepcopy
-from anytree import AnyNode
 from sys import argv
 from heapq import heappush, heappop
+
+"""A simple node class that holds its state, its key, its parent and its depth."""
+class Node:
+    def __init__(self, state, parent=None):
+        self.state = state
+        self.parent = parent
+        self.key = str(self.state)
+        self.depth = 0
+        ancestor = self.parent
+        while ancestor is not None:
+            self.depth += 1
+            ancestor = ancestor.parent
 
 """Constructs a state object from data in a file."""
 def state_from_file(file_name):
@@ -121,7 +132,7 @@ def expand(node):
 
     for state in states:
         if is_valid(state):
-            children.append(AnyNode(parent=node, state=state, key=str(state)))
+            children.append(Node(state, parent=node))
 
     return children
 
@@ -134,7 +145,7 @@ def graph_search(init_state, goal_state, mode):
 
     if init_state == goal_state:
         return [init_state]
-    init_node = AnyNode(state=init_state, key=str(init_state))
+    init_node = Node(init_state)
     explored = {}
 
     # In the A* case, the frontier is a priority queue, otherwise it's just a list.
