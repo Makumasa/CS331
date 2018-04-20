@@ -1,2 +1,0 @@
-test 3 with iddfs:  nodes expanded:     3191844
-                    nodes in solution:  388

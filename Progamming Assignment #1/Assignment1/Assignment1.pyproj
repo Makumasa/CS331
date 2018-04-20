@@ -12,7 +12,7 @@
     <Name>Assignment1</Name>
     <RootNamespace>Assignment1</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>start1.txt goal1.txt iddfs output.txt</CommandLineArguments>
+    <CommandLineArguments>start3.txt goal3.txt astar output.txt</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

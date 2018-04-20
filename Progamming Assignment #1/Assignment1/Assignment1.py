@@ -62,7 +62,7 @@ def print_solution(states, expanded, out_file):
             logging.info("{0},{1},{2}\n".format(zero, one, two))
 
 """
-The hueristic function for the A* search. It assigns an expected cost of 2 per animal on the right
+The heuristic function for the A* search. It assigns an expected cost of 2 per animal on the right
 bank because in almost every case it takes a minimum of two moves to get one animal off the right
 bank (two animals to the left bank at most, one animal has to come back). The only time this isn't
 true is during the final trip in which up to two animals can be moved over in one turn. This
@@ -71,8 +71,8 @@ reduction of 3 is applied, which outweighs the slight deviation from the average
 for the last turn. In the case where the boat is at the left bank, the cost reduction need not be
 applied because that is when the expected cost is already overly optimistic. This is because neither
 the animal that still has to be sent back (+2 points) nor the turn it takes to go back to the right
-bank (+1 point) is factored into the hueristic cost in the left bank case. Thus, the function is
-an optimistic approximation for all states and is therefore admissable.
+bank (+1 point) is factored into the heuristic cost in the left bank case. Thus, the function is
+an optimistic approximation for all states and is therefore admissible.
 """
 def hueristic(node):
     cost = node.depth
