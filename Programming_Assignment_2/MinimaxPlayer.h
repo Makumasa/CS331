@@ -11,6 +11,10 @@
 #include "OthelloBoard.h"
 #include "Player.h"
 #include <vector>
+#include <unordered_map>    // For the state->action lookup table.
+
+typedef std::pair<char, char> action;
+typedef std::unordered_map<std::string, action> action_map;
 
 /**
  * This class represents an AI player that uses the Minimax algorithm to play the game
@@ -43,7 +47,7 @@ public:
     MinimaxPlayer* clone();
 
 private:
-
+    action_map lookup;
 };
 
 

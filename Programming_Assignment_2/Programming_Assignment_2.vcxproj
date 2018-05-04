@@ -45,6 +45,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>/nfs/stak/users/berezam/CS331/Programming_Assignment_2</RemoteRootDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -54,6 +55,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>/nfs/stak/users/berezam/CS331/Programming_Assignment_2</RemoteRootDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -63,6 +65,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>/nfs/stak/users/berezam/CS331/Programming_Assignment_2</RemoteRootDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -70,35 +73,61 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>$(RemoteRootDir)</OutDir>
+    <OutDir>$RemoteRootDir)</OutDir>
     <IntDir>$(RemoteRootDir)/tmp</IntDir>
     <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
     <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
     <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
     <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
-    <RemoteBuildOutputs>othello</RemoteBuildOutputs>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(RemoteRootDir)</OutDir>
+    <OutDir>$RemoteRootDir)</OutDir>
     <IntDir>$(RemoteRootDir)/tmp</IntDir>
     <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
     <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
     <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
     <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
-    <RemoteBuildOutputs>othello</RemoteBuildOutputs>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <OutDir>$(RemoteRootDir)</OutDir>
+    <OutDir>$RemoteRootDir)</OutDir>
     <IntDir>$(RemoteRootDir)/tmp</IntDir>
     <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
     <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
     <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
     <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
-    <RemoteBuildOutputs>othello</RemoteBuildOutputs>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <OutDir>$RemoteRootDir)</OutDir>
+    <IntDir>$(RemoteRootDir)/tmp</IntDir>
+    <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <OutDir>$RemoteRootDir)</OutDir>
+    <IntDir>$(RemoteRootDir)/tmp</IntDir>
+    <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean; make</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <OutDir>$RemoteRootDir)</OutDir>
+    <IntDir>$(RemoteRootDir)/tmp</IntDir>
+    <RemoteProjectDir>$(RemoteRootDir)</RemoteProjectDir>
+    <RemoteBuildOutputs>$(RemoteRootDir)/othello</RemoteBuildOutputs>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Makefile" />
-    <None Include="othello" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
