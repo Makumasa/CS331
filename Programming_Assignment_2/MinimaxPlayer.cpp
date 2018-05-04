@@ -95,7 +95,7 @@ int build_lookup(state s, action_map& lookup) {
         other_symbol = s.board->get_p1_symbol();
     }
 
-    // If the current state is terminal, the utility is determined using the utility functioon.
+    // If the current state is terminal, the utility is determined using the utility function.
     if (terminal_test(s.board)) {
         best_util = utility(s.board);
     } 
